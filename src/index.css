@@ -1,0 +1,12 @@
+
+@font-face {
+  font-family:Bodoni ;
+  src: url(../src/assets/fonts/Bodoni\ Roman\ font.ttf);
+}
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: Bodoni;
+}
