@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import TypingAudio from '../assets/audios/typing.mp3'
+import WrongAudio from '../assets/audios/wrong.mp3'
+import SuccessAudio from '../assets/audios/success.mp3'
 import "./typing.css";
 
 
@@ -71,10 +74,12 @@ export function Typing() {
         if(typedChar===currentChar.textContent){
             setCharIndex(prev=>prev+1)
             wrongCorrect[charIndex]="correct";
+            new Audio(TypingAudio).play()
         }else{
             setCharIndex(prev=>prev+1)
             setMistake(prev=>prev+1)
             wrongCorrect[charIndex]="incorrect";
+            new Audio(WrongAudio).play()
         }
         if(charIndex===characters.length-1){
             setTypingMode(false)
@@ -83,6 +88,7 @@ export function Typing() {
         setTypingMode(false)
         setRestartTryAgain("Try Again")
         setAllowNext(true)
+        new Audio(SuccessAudio).play()
     }
 
   };
