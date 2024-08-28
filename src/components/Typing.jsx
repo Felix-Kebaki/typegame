@@ -10,7 +10,7 @@ const AllSentences = [
 ];
 
 export function Typing() {
-  const maxTime = 10;
+  const maxTime = 120;
   const [currentObject, setCurrentObject] = useState(0);
   const [timeleft, setTimeleft] = useState(maxTime);
   const [typingMode, setTypingMode] = useState(false);
